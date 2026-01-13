@@ -4,6 +4,8 @@
 
 Docker configuration for running Hytale server in a containerized environment.
 
+https://hub.docker.com/r/dhopcs/hytale-server
+
 ## Docker Compose Setup
 
 ```yaml
