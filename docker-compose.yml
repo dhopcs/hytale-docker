@@ -1,6 +1,6 @@
 services:
   hytale-server:
-    build: .
+    image: dhopcs/hytale-server:latest
     container_name: hytale-server
     restart: unless-stopped
     ports:
@@ -12,4 +12,3 @@ services:
       - JAVA_TOOL_OPTIONS=-Xmx4G -Xms2G
     stdin_open: true
     tty: true
-
