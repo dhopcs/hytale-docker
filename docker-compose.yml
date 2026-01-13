@@ -1,0 +1,15 @@
+services:
+  hytale-server:
+    build: .
+    container_name: hytale-server
+    restart: unless-stopped
+    ports:
+      - "5520:5520/udp"
+    volumes:
+      - ./hytale-data:/hytale  # All server files and data
+      - ~/.hytale-downloader-credentials.json:/root/.hytale-downloader-credentials.json  # OAuth credentials
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xmx4G -Xms2G
+    stdin_open: true
+    tty: true
+
